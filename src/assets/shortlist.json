@@ -1,0 +1,74 @@
+[
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Nishant Tidke",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Nanded",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/vidhan.jpg",
+        "name": "Karan Kshirsagar",
+        "age": 26,
+        "religion": "Hindu",
+        "location": "Borgoan,Telang",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/sunil.jpg",
+        "name": "NItin Sharma",
+        "age": 22,
+        "religion": "Hindu",
+        "location": "Bangolar",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Arvind.jpg",
+        "name": "Shree Solanki",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Hydrabad",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Nilesh Walve",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Mumbai",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Shubham Shinde",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Ooti",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Sudip Sukalkar",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Nagpur",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Ganesh Tidke",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Hingoli",
+        "mothertongue": "marathi"
+    },
+    {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Rupesh More",
+        "age": 23,
+        "religion": "Hindu",
+        "location": "Solapur",
+        "mothertongue": "marathi"
+    }
+]

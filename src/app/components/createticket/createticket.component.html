@@ -1,0 +1,200 @@
+<!-- <app-header></app-header> -->
+<div class="fix sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light nav bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/4957587-removebg-preview.png" alt="" srcset=""><span>
+          <h5>NateSambhandh</h5>
+        </span>
+      </a>
+      <div id="navbarSupportedContent">
+        <p class="text-white helpline mt-3 ">Help-Line 9309976861</p>
+      </div>
+      <div class="profile">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Profile
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#" routerLink="/editprofile">Edit Profile</a>
+            <a href="#" routerLink="/setting">Setting</a>
+          </div>
+        </div>
+
+
+      </div>
+      <button class="button btn-dark" routerLink="/home">logout</button>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar22">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav page me-auto mb-2 mb-lg-0 textleft">
+          <!-- <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/login">login</a>
+            </li> -->
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/profileupdate"></a> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/myinterest">My-Interest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/shortlist">Shortlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/chatbox">Message</a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Block</a>
+            </li> -->
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/search">Search </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/inbox">Inbox</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#" routerLink="/helpdesk">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<body>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- <app-sidebar></app-sidebar> -->
+      <div class="row">
+        <div class="sidebar-container  col-md-4 shadow-lg  bg-white rounded mt-5">
+          <div class="sidebar-logo">
+            <img src="../../../assets/ag7e4ap8_genelia_625x300_30_August_20.jpg" alt="" srcset=""
+              class="img-fluid circular--square" routerLink="/viewprofile">
+            <h3 style="text-align: center; margin-top: 10px;">Aarna Bhosle</h3>
+          </div>
+          <ul class="sidebar-navigation space">
+            <li>
+              <a href="#" routerLink="/dashboard">
+                <i class="fa-solid fa-gauge"></i> Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" routerLink="/updatemembership">
+                <i class="fa-solid fa-box-open"></i> Packages
+              </a>
+            </li>
+            <li>
+              <a href="#" routerLink="/chatbox">
+                <i class="fa-solid fa-message"></i> Message
+              </a>
+            </li>
+            <li>
+              <a href="#" routerLink="/support-ticket">
+                <i class="fa-solid fa-ticket"></i> Support Ticket
+              </a>
+            </li>
+            <li>
+              <a href="#" routerLink="/myinterest">
+                <i class="fa-solid fa-heart"></i> My Interest
+              </a>
+            </li>
+            <li>
+              <a href="#" routerLink="/shortlist">
+                <i class="fa-solid fa-list"></i> Shortlist
+              </a>
+            </li>
+
+            <li>
+              <a href="#" routerLink="/setting">
+                <i class="fa-solid fa-gear"></i> Settings
+              </a>
+            </li>
+
+          </ul>
+          <!-- <button routerLink="/home" class="btnn1 btn btn-dark mt-3" type="button">Logout</button> -->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-8 ">
+      <div class="aiz-user-panel ticket">
+        <div class="aiz-titlebar mt-2 mb-4">
+          <div class="align-items-center">
+            <h1 class="h3">Create a ticket</h1>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header row gutters-5 ">
+            <div class="col text-center text-md-left">
+              <h5 class="mb-md-0 h6">Create Ticket</h5>
+            </div>
+          </div>
+          <div class="card-body">
+            <form class="form-horizontal " action="https://demo.activeitzone.com/matrimonial/support-ticket/store"
+              method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="_token" value="iwVce3wzT9XYeoUMlKgEm9ZC5HXLKFUPxqbhDMgS">
+              <div class="form-group row">
+                <label class="col-sm-2 col-from-label">Subject</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-sm" name="subject" value=""
+                    placeholder="Enter ticket subject">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-from-label">Support category</label>
+                <div class="col-sm-10">
+                  <div class="dropdown bootstrap-select form-control aiz-"><select class="form-control aiz-selectpicker"
+                      name="support_category_id" required="" data-placeholder="Select support category" tabindex="-98">
+                      <option value="4">Account Related</option>
+                      <option value="3">Report</option>
+                      <option value="2">Sales</option>
+                      <option value="1">Marketing</option>
+                    </select>
+                    <div class="dropdown-menu ">
+                      <div class="inner show" role="listbox" id="bs-select-1" tabindex="-1">
+                        <ul class="dropdown-menu inner show" role="presentation"></ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-from-label">Details</label>
+                <div class="col-sm-10">
+                  <textarea class="aiz-text-editor" name="description" cols="95"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-from-label">File Attachment</label>
+                <div class="col-sm-10">
+                  <div class="input-group input-group-sm" data-toggle="aizuploader" data-multiple="true">
+                    <!-- <div class="input-group-prepend">
+                                            <div class="input-group-text bg-soft-secondary font-weight-medium">Browse</div>
+                                        </div> -->
+                    <!-- <div class="form-control file-amount">Choose File</div> -->
+                    <input type="file" name="attachments" class="selected-files">
+                  </div>
+                  <div class="file-preview"></div>
+                </div>
+              </div>
+              <div class="text-right">
+                <button type="submit" class="btn btn-sm btn-dark transition-3d-hover mr-1" (click)="submitTicket()">Send
+                  ticket</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

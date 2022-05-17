@@ -1,0 +1,53 @@
+body{
+    overflow: hidden;
+}
+.img-fluid{
+    width:80px;
+    height:200px;
+    float: center;
+
+  }
+
+.card{
+    border: none;
+    text-align: center;
+  
+}
+.card-body{
+    border: none;
+    width: 100%;
+    
+}
+.dash i{
+    font-size: 30px;
+   
+}
+.carddddd{
+/* float: right; */
+/* margin-left: 19%; */
+margin-left: 260px;
+padding: 10px;
+}
+
+.card2{
+    margin-top: -750px;
+    width: 100%;
+    margin-left: 10%;
+}
+a{
+    text-decoration: none;
+}
+.fa-heart
+{
+    color: red;
+}
+.fa-image{
+    color: #3498DB;
+}
+
+.fa-phone{
+    color:#58D68D ;
+}
+.id{
+    font-weight: bolder;
+}

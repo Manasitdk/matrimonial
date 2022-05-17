@@ -1,0 +1,140 @@
+<app-header></app-header>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <div class="row">
+        <div class="col-md-4 side">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col col-md-8 card2 ">
+            <div class="col-md-8  carddddd shadow-lg bg-white rounded;">
+                <div class="row gutters-4 row-cols-xl-3 row-cols-2 dash">
+                    <div class="col mx-auto mb-3">
+                        <div class="bg-light dash rounded text-center p-4">
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="h4 fw-700 text-primary-grad">1118</div>
+                            <div class="opacity-50">Remaining <br> Interest</div>
+                        </div>
+                    </div>
+                    <div class="col mx-auto mb-3">
+                        <div class="bg-light rounded  text-center p-4">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="h4 fw-700 text-primary-grad">1025</div>
+                            <div class="opacity-50 ">Remaining <br> Contact View</div>
+                        </div>
+                    </div>
+                    <div class="col mx-auto mb-3">
+                        <div class="bg-light rounded  text-center p-4">
+                            <i class="fa-solid fa-image"></i>
+                            <div class="h4 fw-700 text-center text-primary-grad">1101</div>
+                            <div class="opacity-50 text-center">Remaining <br> Gallery Image Upload</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 mt-3 shadow-lg bg-white rounded mt-5 " style="float: right;  margin-right: 16%; ">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="fs-14 mb-0">Matched profile</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row " *ngFor="let name of names">
+                            <div class="col-4 p-2">
+                                <a routerLink="/viewprofile"
+                                    class="text-reset border rounded row no-gutters align-items-center mb-3">
+                                    <div class="col-auto w-100px">
+                                        <img src="../../../assets/Depesh.jpg"
+                                            class="img-fit w-100 size-100px img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="p-3">
+                                            <h5 class="fs-16 text-body text-truncate">{{name.name}}</h5>
+                                            <span class="mr-1 d-inline-block id">
+                                                {{name.id}}
+                                            </span>
+                                            <div class="fs-12 text-truncate-3">
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.age}}
+                                                </span>
+                                                &amp;
+                                                <span class="mr-1 d-inline-block">
+                                                </span>
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.matrialstatus}}
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-4 p-2">
+                                <a routerLink="/viewprofile"
+                                    class="text-reset border rounded row no-gutters align-items-center mb-3">
+                                    <div class="col-auto w-100px">
+                                        <img src="../../../assets/Arvind.jpg"
+                                            class="img-fit w-100 size-100px img-fluid">
+                                    </div>
+
+
+                                    <div class="col">
+                                        <div class="p-3">
+                                            <h5 class="fs-16 text-body text-truncate">{{name.name}}</h5>
+                                            <span class="mr-1 d-inline-block id">
+                                                {{name.id}}
+                                            </span>
+                                            <div class="fs-12 text-truncate-3">
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.age}}
+                                                </span>
+                                                &amp;
+                                                <span class="mr-1 d-inline-block">
+                                                </span>
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.matrialstatus}}
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-4 p-2">
+                                <a routerLink="/viewprofile"
+                                    class="text-reset border rounded row no-gutters align-items-center mb-3">
+                                    <div class="col-auto w-100px">
+                                        <img src="../../../assets/Depesh.jpg"
+                                            class="img-fit w-100 size-100px img-fluid">
+                                    </div>
+                                    <div class="col">
+                                        <div class="p-3">
+                                            <h5 class="fs-16 text-body text-truncate">{{name.name}}</h5>
+                                            <span class="mr-1 d-inline-block id">
+                                                {{name.id}}
+                                            </span>
+                                            <div class="fs-12 text-truncate-3 ">
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.age}}
+                                                </span>
+                                                &amp;
+                                                <span class="mr-1 d-inline-block">
+                                                </span>
+                                                <span class="mr-1 d-inline-block">
+                                                    {{name.matrialstatus}}
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

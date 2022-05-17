@@ -1,0 +1,36 @@
+body {
+    font-weight: 500;
+    color: #000000;
+    overflow: hidden;
+}
+
+
+
+ /* .btn-primary,
+.bg-primary-grad {
+ background-color: rgb(0, 0, 0);
+ border: none;
+ color: white;
+ margin-left: 30px;
+}  */
+
+.fa-eye{
+    color: #000000;
+    font-size: 150%;
+}
+
+.btn-xs{
+    background-color: #000000;
+    color: white;
+}
+.badge{
+    background-color: rgb(0, 0, 0);
+}
+
+.support{
+    margin-left: -70px;
+}
+.btnaddnotes{
+    margin-left: 80%;
+}
+

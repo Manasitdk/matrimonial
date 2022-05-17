@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<body>
+
+    <div class="row ">
+        <div class="col-md-4">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-8 myintresest">
+            <h2 class="ms-2 mt-5">My Interest</h2>
+
+            <select class="custom-select form-control btnaddnotes ml-2 " id="image" [(ngModel)]="search" required class="btnaddnotes">
+                <option selected>Filter By Status</option>
+                <option *ngFor="let obj of myinterestobj | unique: 'status'" value="{{obj.status}}">{{obj.status}}
+                </option>
+            </select>
+            <table class="table mt-5 ms-0">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Option</th>
+                    </tr>
+                </thead>
+                <tbody
+                    *ngFor="let obj of myinterestobj | filter:search | paginate: { itemsPerPage: 4, currentPage: p }; index as i">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <img class="img-md" src="{{obj.imgurl}}" height="75px" alt="Photo" routerLink="/viewprofile"
+                            (click)="viewProfile(obj.memberCode)">
+                        <td>{{obj.name}} </td>
+                        <td>{{obj.age}}</td>
+                        <td>
+                            <span class="badge badge-inline badge-success">{{obj.status}}</span>
+                        </td>
+                        <td class="text-right footable-last-visible">
+                            <a href="" class="btn btn-soft-danger btn-icon btn-circle btn-sm"  title="dislike" >
+                                <i class="fa-solid fa-heart-crack"></i>
+                           </a>
+                        
+                     
+                       </td>
+
+                     </tr>
+                 </tbody>
+            </table>
+            <div class="text-end">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+         </div>
+     </div>
+</body>

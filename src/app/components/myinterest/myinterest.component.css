@@ -1,0 +1,47 @@
+body{
+    overflow: hidden;
+}
+
+.btn-primary,
+.bg-primary-grad {
+ background-color: rgb(0, 0, 0);
+ border: none;
+ color: white;
+ margin-left: 30px;
+} 
+.btn-xs{
+    background-color: #000000;
+    color: white;
+}
+.badge{
+    background-color: rgb(0, 0, 0);
+}
+
+.myintresest{
+    margin-left: -40px;
+}
+.na{
+    text-decoration: none;
+    color: #000000;
+}
+/* .btnaddnotes{
+    border: 2px solid black;
+    font-weight: 600;
+    border-radius: 50px;
+    color: black;
+    padding: 7px;
+}
+.btnaddnotes:hover{
+    box-shadow: 0 100px 20px -8px rgba(0, 0, 0, .7);
+    color: black;
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+} */
+
+.btnaddnotes{
+    margin-left: 80%;
+}
+.fa-heart-crack{
+    color: red;
+    font-size: 22px;
+}

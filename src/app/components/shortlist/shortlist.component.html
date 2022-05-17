@@ -1,0 +1,71 @@
+<app-header></app-header>
+<body>
+
+    <div class="row ">
+        <div class="col-md-4">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-md-8 myintresest">
+            <h2 class="ms-2 mt-5">My Shortlist Profiles</h2>
+            <select class="custom-select form-control btnaddnotes ml-2 " id="image" [(ngModel)]="search" required class="btnaddnotes">
+                <option selected>Filter By Location</option>
+                <option *ngFor="let obj of shortlistobj | unique: 'location' " value="{{obj.location}}">{{obj.location}}
+                </option>
+            </select>
+            <table class="table mt-5 ms-0">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th>Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Religion</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Mother Language</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr class="footable-header">
+                </thead>
+                <tbody *ngFor="let obj of shortlistobj | filter:search | paginate: { itemsPerPage: 4, currentPage: p }; index as i">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <img class="img-md" src="{{obj.imgurl}}" height="75px" alt="Photo" routerLink="/viewprofile"
+                            (click)="viewProfile(obj.memberCode)">
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.age}}</td>
+                        <td>{{obj.religion}}</td>
+                        <td>{{obj.location}}</td>
+                        <td>{{obj.mothertongue}}</td>
+                        <td class="text-right footable-last-visible">
+                           <ng-template #content let-modal>
+                               <div class="modal-header text-dec">
+                                   <h4 class="text-center" id="modal-basic-title"></h4>
+                                   <button type="button" class="btn-close" aria-label="Close"
+                                       (click)="modal.dismiss('Cross click')">
+                                   </button>
+                               </div>
+                               <div class="modal-body">
+                                   <h3 class="text-center title">Delete Profile</h3>
+                                   <h5 class="mt-4 text-center text-muted"> Are You Sure you want to delete the
+                                       profile ?</h5>
+                                       <button class="btn btn-danger ms-5 px-5 mt-3" (click)="todelete(obj)">Delete</button>
+                                   <button class="btn btn-secondary ms-5 px-5 mt-3" (click)="modal.dismiss()">Cancel</button>
+                                   
+                               </div>
+                           </ng-template>
+                           <a class="btn btn-soft-danger btn-icon btn-circle btn-sm" title="Remove" (click)="open(content)">
+                               <i class="fa-solid fa-trash"></i>
+                           </a>
+                       </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-end">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</body>

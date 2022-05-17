@@ -1,0 +1,587 @@
+<app-header></app-header>
+<div class="container-xl px-4 mt-4">
+    <h3></h3>
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="card mb-4 mb-xl-0">
+          <div class="card-header">Profile Picture</div>
+          <div class="card-body text-center">
+            <!-- Profile picture image-->
+            <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png"
+              alt="">
+            <!-- Profile picture help block-->
+            <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+            <!-- Profile picture upload button-->
+            <button class=" btn1 btn btn-dark" type="button">Upload new image</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8">
+        <!-- Account details card-->
+        <form [formGroup]="editProfile">
+          <div formGroupName="basicDetails">
+            <div class="card mb-4">
+  
+              <div class="card-header">Basic Details</div>
+              <div class="card-body">
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">City you live in</label>
+                  <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" name="city"
+                    [(ngModel)]="member.city" formControlName="city" />
+                  <div class="form-text" style="color: red" *ngIf="
+                          editProfile.get('city')?.hasError('required') ||
+                          editProfile.get('city')?.touched
+                        ">
+                    Enter the city
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Your height</label>
+                  <select class="form-control" id="inputUsername" type="text" placeholder="Height" name="height"
+                    [(ngModel)]="member.height" aria-label=".form-select-sm example" formControlName="height">
+                    <option selected>Select</option>
+                    <option>4.0 ft</option>
+                    <option>4.1ft</option>
+                    <option>4 2t</option>
+                    <option>4.3ft</option>
+                    <option>4 4t</option>
+                    <option>4.5ft</option>
+                    <option>4 6t</option>
+                    <option>4.7ft</option>
+                    <option>4 8t</option>
+                    <option>4.9ft</option>
+                    <option>5.0 ft</option>
+                    <option>5.1ft</option>
+                    <option>5.2 ft</option>
+                    <option>5.3ft</option>
+                    <option>5.4 ft</option>
+                    <option>5.5ft</option>
+                    <option>5.6ft</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('height')?.hasError('required') ||
+                      editProfile.get('height')?.touched
+                      ">
+                    Select The height
+                  </div>
+                </div>
+  
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="color">Skin color</label>
+                    <select class="form-control" id="inputLocation" type="text" name="skinColor"
+                      [(ngModel)]="member.skinColor" formControlName="skinColor">
+                      <option selected>Select</option>
+                      <option>Blonde</option>
+                      <option>Fair</option>
+                      <option>Ducky</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('skinColor')?.hasError('required') ||
+                        editProfile.get('skinColor')?.touched
+                        ">
+                      Select The SkinColor
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="mothertoung">Your mother tounge</label>
+                    <select class="form-control" id="inputLocation" type="text" name="language"
+                      [(ngModel)]="member.language" formControlName="motherTounge">
+                      <option selected>Select</option>
+                      <option>Marathi</option>
+                      <option>Telugu</option>
+                      <option>Tamil</option>
+                      <option>Kanada</option>
+                      <option>Hindi</option>
+                      <option>English</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('motherTounge')?.hasError('required') ||
+                        editProfile.get('motherTounge')?.touched
+                        ">
+                      Select The motherTounge
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="small mb-1 mt-3" for="isub-community">Your Sub-community</label>
+                    <select class="form-control" id="inputLocation" type="text" placeholder="Enter your location"
+                      name=" subCommunity" [(ngModel)]="member.subCommunity" aria-label=".form-select-sm example"
+                      formControlName="subCommunity">
+                      <option selected>Select</option>
+                      <option>96 Kuli Maratha</option>
+                      <option>Bhandar</option>
+                      <option>Chambhar</option>
+                      <option>Dhangar</option>
+                      <option>Koli</option>
+                      <option>Kunbhi</option>
+                      <option>Maratha</option>
+                      <option>Mannervarlu</option>
+                      <option>Matang</option>
+                      <option>Sutar</option>
+                      <option>Sonar</option>
+                      <option>Teli</option>
+                      <option>Vanjara</option>
+                      <option>Banjara</option>
+                      <option>Lohar</option>
+                      <option>Vani</option>
+                      <option>Mahadevkoli</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('subCommunity')?.hasError('required') ||
+                        editProfile.get('subCommunity')?.touched                      ">
+                      Select The Sub-Community.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="small mb-1" for="mothertoung">Current address</label>
+                    <textarea name="" class="form-control" id="inputLocation" id="" cols="90" rows="3"
+                      name="currentAddress" [(ngModel)]="member.currentAdress"
+                      formControlName="currentAddress"></textarea>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('currentAddress')?.hasError('required') ||
+                        editProfile.get('currentAddress')?.touched || editProfile.get('currentAddress')?.hasError('maxlength')
+                          ">
+                      Enter the current Address.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="small mb-1" for="mothertoung">Permanant address</label>
+                    <textarea name="" class="form-control" id="inputLocation" id="" cols="90" rows="3"
+                      name="permanantAddress" [(ngModel)]="member.permanentAddress" formControlName="pAddress"></textarea>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('pAddress')?.hasError('required') ||
+                        editProfile.get('pAddress')?.touched || editProfile.get('currentAddress')?.hasError('maxlength')
+     
+                          ">
+                      Enter the Permanant Address.
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+          <div formGroupName="educationalDetails">
+            <div class="card mb-4">
+              <div class="card-header">Education Details</div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Heigest Qualification</label>
+                  <select class="form-control" id="inputLocation" type="text" name="qualification"
+                    [(ngModel)]="member.highestQualification" formControlName="highestQulaification">
+                    <option selected>Select</option>
+                    <option>Post Graduate</option>
+                    <option>Graduate</option>
+                    <option>Diploma</option>
+                    <option>12 th</option>
+                    <option>10 th</option>
+                    <option>8 th</option>
+                    <option>5 th</option>
+                    <option>4 th</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('highestQulaification')?.hasError('required') ||
+                      editProfile.get('highestQulaification')?.touched
+                      ">
+                    Select the Qualification
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Degree</label>
+                  <select class="form-control" id="inputLocation" type="text" name="degree" [(ngModel)]="member.degree"
+                    formControlName="degree">
+                    <option selected>Select</option>
+                    <option>BE/B.tech</option>
+                    <option>MBA</option>
+                    <option>Ms</option>
+                    <option>MBBS</option>
+                    <option>BSC</option>
+                    <option>BCA</option>
+                    <option>BA</option>
+                    <option>MA</option>
+                    <option>MCA</option>
+                    <option>MSC</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('degree')?.hasError('required') ||
+                      editProfile.get('degree')?.touched
+                      ">
+                    Select The Degree.
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Work with</label>
+                  <select class="form-control" id="inputLocation" type="text" name="work" [(ngModel)]="member.work"
+                    formControlName="workWith">
+                    <option selected>Select</option>
+                    <option>Goverment Sector</option>
+                    <option>Private Sector</option>
+                    <option>Bussiness</option>
+                    <option>Defence</option>
+                    <option>Not-working</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('workWith')?.hasError('required') ||
+                      editProfile.get('workWith')?.touched
+                      ">
+                    Select The currentAddress.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Annual Income</label>
+                  <select class="form-control" id="inputLocation" type="text" name="income"
+                    [(ngModel)]="member.annualIncome" formControlName="annualIncome">
+                    <option selected>Select</option>
+                    <option>No income</option>
+                    <option>0-1 lakh</option>
+                    <option>1-3 lakh</option>
+                    <option>3-5 lakh</option>
+                    <option>5-7 lakh</option>
+                    <option>7-10 lakh</option>
+                    <option>10 lakh to more</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('annualIncome')?.hasError('required') ||
+                      editProfile.get('annualIncome')?.touched ">
+                    Enter the annual Income.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div formGroupName="partnerDetails">
+            <div class="card mb-4">
+              <div class="card-header">Partner basic Details</div>
+              <div class="card-body">
+                <div class="row gx-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputFirstName">Age</label>
+                    <select class="form-control" id="inputLocation" type="text" name="age" [(ngModel)]="member.age.from"
+                      formControlName="ageFrom">
+                      <option selected>select Age</option>
+                      <option value="1">22</option>
+                      <option value="2">23</option>
+                      <option value="3">24</option>
+                      <option value="1">25</option>
+                      <option value="2">26</option>
+                      <option value="3">27</option>
+                      <option value="3">28</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('ageFrom')?.hasError('required') ||
+                      editProfile.get('ageFrom')?.touched
+                      ">
+                      Select the age From.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputLastName">To</label>
+                    <select class="form-control" id="inputLocation" type="text" name="age1" [(ngModel)]="member.age.to"
+                      formControlName="ageTo">
+                      <option selected>select Age</option>
+                      <option value="1">22</option>
+                      <option value="2">23</option>
+                      <option value="3">24</option>
+                      <option value="1">25</option>
+                      <option value="2">26</option>
+                      <option value="3">27</option>
+                      <option value="3">28</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('ageTo')?.hasError('required') ||
+                      editProfile.get('ageTo')?.touched
+                      ">
+                      Select the age to.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row gx-3 mb-3">
+  
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="inputFirstName">Height</label>
+                    <select class="form-control" id="inputLocation" type="text" name="h" [(ngModel)]="member.dHeight.from"
+                      formControlName="heightFrom">
+                      <option selected>select Height</option>
+                      <option value="1">5.1 ft</option>
+                      <option value="1">5.2 ft</option>
+                      <option value="1">5.3 ft</option>
+                      <option value="1">5.4 ft</option>
+                      <option value="1">5.5 ft</option>
+                      <option value="1">5.6 ft</option>
+                      <option value="1">5.7 ft</option>
+                      <option value="1">5.8 ft</option>
+                      <option value="1">5.9 ft</option>
+                      <option value="1">6.0 ft</option>
+                      <option value="1">6.1 ft</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('heightFrom')?.hasError('required') ||
+                        editProfile.get('heightFrom')?.touched
+                      ">
+                      Select the Height From.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="">To</label>
+                    <select class="form-control" id="" type="text" name="h" [(ngModel)]="member.dHeight.to"
+                      formControlName="heightTo">
+                      <option selected>select Height</option>
+                      <option value="1">5.1 ft</option>
+                      <option value="1">5.2 ft</option>
+                      <option value="1">5.3 ft</option>
+                      <option value="1">5.4 ft</option>
+                      <option value="1">5.5 ft</option>
+                      <option value="1">5.6 ft</option>
+                      <option value="1">5.7 ft</option>
+                      <option value="1">5.8 ft</option>
+                      <option value="1">5.9 ft</option>
+                      <option value="1">6.0 ft</option>
+                      <option value="1">6.1 ft</option>
+                    </select>
+                    <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('heightTo')?.hasError('required') ||
+                        editProfile.get('heightTo')?.touched
+                      ">
+                      Select the Height to.
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress">Marital Status</label>
+                  <select class="form-control" id="inputLocation" type="text" name="maritalStatus"
+                    [(ngModel)]="member.maritalStatus" formControlName="maritalStatus">
+                    <option selected>Select Status</option>
+                    <option value="1">Never Married</option>
+                    <option value="1">Divorced</option>
+                    <option value="1">Widowed</option>
+                    <option value="1">Annulled</option>
+                    <option value="1">Awating Divorce</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('maritalStatus')?.hasError('required') ||
+                        editProfile.get('maritalStatus')?.touched
+                      ">
+                    Select the Marital Status.
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress">Religion
+                  </label>
+                  <select class="form-control" id="inputLocation" type="text" name="religion"
+                    [(ngModel)]="member.religion" formControlName="religion">
+                    <option selected>Select</option>
+                    <option>Hindu</option>
+                    <option>Muslim</option>
+                    <option>Christian</option>
+                    <option>Sikhs</option>
+                    <option>Buddhists</option>
+                    <option>Jains</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('religion')?.hasError('required') ||
+                        editProfile.get('religion')?.touched
+                      ">
+                    Select the Religion.
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress">Your Sub-community</label>
+                  <select class="form-control" id="inputLocation" type="text" name="dSubCommunity"
+                    [(ngModel)]="member.DsubCommunity" formControlName="pSubCommunity">
+                    <option selected>Select</option>
+                    <option>96 Kuli Maratha</option>
+                    <option>Bhandar</option>
+                    <option>Chambhar</option>
+                    <option>Dhangar</option>
+                    <option>Koli</option>
+                    <option>Kunbhi</option>
+                    <option>Maratha</option>
+                    <option>Mannervarlu</option>
+                    <option>Matang</option>
+                    <option>Sutar</option>
+                    <option>Sonar</option>
+                    <option>Teli</option>
+                    <option>Vanjara</option>
+                    <option>Banjara</option>
+                    <option>Lohar</option>
+                    <option>Vani</option>
+                    <option>Mahadevkoli</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('subCommunity')?.hasError('required') ||
+                      editProfile.get('subCommunity')?.touched
+                    ">
+                    Select the Sub-community.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputEmailAddress">Mother tounge</label>
+                  <select class="form-control" id="inputLocation" type="text" name="langauge"
+                    [(ngModel)]="member.motherTounge" formControlName="pMotherTounge">
+                    <option selected>Select</option>
+                    <option>Marathi</option>
+                    <option>Hindi</option>
+                    <option>Punjabi</option>
+                    <option>Rajastani</option>
+                    <option>Bengali</option>
+                    <option>Gujrati</option>
+                    <option>Telgu</option>
+                    <option>Kanada</option>
+                    <option>English</option>
+                    <option>Odia</option>
+                    <option>Marwari</option>
+                    <option>Tamil</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('motherTounge')?.hasError('required') ||
+                      editProfile.get('motherTounge')?.touched
+                    ">
+                    Select the age to.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div formGroupName="familyDetails">
+            <div class="card mb-4">
+              <div class="card-header">Family Details</div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Your Family type</label>
+                  <select class="form-control" id="inputLocation" type="text" name="familyType"
+                    [(ngModel)]="member.familyType" formControlName="familyType">
+                    <option selected>Select</option>
+                    <option>Joint family</option>
+                    <option>Nuclear family</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                        editProfile.get('familyType')?.hasError('required') ||
+                        editProfile.get('familyType')?.touched
+                      ">
+                    Select the family Type
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Father Occupation</label>
+                  <select class="form-control" id="inputLocation" type="text" name="fatheroccupation"
+                    [(ngModel)]="member.fatherOccupation" formControlName="fatherOccupation">
+                    <option selected>Select</option>
+                    <option>Goverment Servant</option>
+                    <option>Defence</option>
+                    <option>Private service</option>
+                    <option>Bussiness Man</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                    editProfile.get('fatherOccupation')?.hasError('required') ||
+                    editProfile.get('fatherOccupation')?.touched
+                      ">
+                    Select the father Occupation
+                  </div>
+                </div>
+  
+                <div class="mb-3">
+                  <label class="small mb-1" for="inputUsername">Mother Occupation</label>
+                  <select class="form-control" id="inputLocation" type="text" name="motherOccupation"
+                    [(ngModel)]="member.motherOccupation" formControlName="motherOccupation">
+                    <option selected>Select</option>
+                    <option>Goverment Servant</option>
+                    <option>Defence</option>
+                    <option>Private service</option>
+                    <option>Bussiness Man</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-text" style="color: red" *ngIf="
+                    editProfile.get('motherOccupation')?.hasError('required') ||
+                    editProfile.get('motherOccupation')?.touched
+                    ">
+                    Select the mother Occupation
+                  </div>
+                </div>
+  
+                <div class="row gx-3 mb-3">
+  
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="color">Sisters</label>
+                    <input class="form-control" id="inputUsername" type="text" name="sister" [(ngModel)]="member.sisters"
+                      formControlName="sisters" />
+                    <div class="form-text" style="color: red" *ngIf="
+                      editProfile.get('sisters')?.hasError('required') ||
+                      editProfile.get('sisters')?.touched
+                        ">
+                      Enter the no. of sisters
+                    </div>
+                  </div>
+  
+                  <div class="col-md-6">
+                    <label class="small mb-1" for="mothertoung">Brothers</label>
+                    <input class="form-control" id="inputUsername" type="text" name="brother"
+                      [(ngModel)]="member.brothers" formControlName="brothers" />
+                    <div class="form-text text-danger"
+                      *ngIf="editProfile.get('email')?.hasError('required') && editProfile.get('email')?.touched">
+                      enter your brothers</div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div formGroupName="describeYourself">
+            <div class="card mb-4">
+              <div class="card-header">Describe yourself</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="">
+                      <label for="Current address" class="form-label">
+                        Describe yourself</label>
+                      <textarea class="form-control" rows="3" name="selfDescription" [(ngModel)]="member.description"
+                        formControlName="selfDescription"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card mb-4">
+            <div class="card-header">Photos Details</div>
+            <div class="card-body">
+              <div>
+                <input type="file" name="photo" />
+  
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-header">Adhar card verification</div>
+            <div class="card-body">
+              <div>
+                <input type="file" />
+  
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-xl px-4 mt-4">
+    <button class="btnn1 btn btn-primary py-1 px-5 mb-2" type="button" (click)="profileEdit()">
+      Submit
+    </button>
+  </div>

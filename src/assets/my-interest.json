@@ -1,0 +1,56 @@
+[
+    {
+      "imgurl": "assets/images/listing/Depesh.jfif",
+      "name": "Deep Mehra",
+      "age": 25,
+      "status":"Accept"
+    },
+    {
+      "imgurl": "assets/images/listing/Arvind.jpg",
+      "name": "Nitin Sharma",
+      "age": 22,
+      "status":"Pending"
+    },
+    {
+      "imgurl": "assets/images/listing/vidhan.jpg",
+      "name": "Sanket More",
+      "age": 24,
+      "status":"Accept"
+    },
+    {
+        "imgurl": "assets/images/listing/Arvind.jpg",
+        "name": "Satish Shete",
+        "age": 23,
+        "status":"Accept"
+      },
+      {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Amar Dandegaonkar",
+        "age": 21,
+        "status":"Pending"
+      },
+      {
+        "imgurl": "assets/images/listing/vidhan.jpg",
+        "name": "Sandesh Bhise",
+        "age": 26,
+        "status":"Pending"
+      },
+      {
+        "imgurl": "assets/images/listing/sunil.jpg",
+        "name": "Sudarshan Kadam",
+        "age": 25,
+        "status":"Accept"
+      },
+      {
+        "imgurl": "assets/images/listing/Depesh.jfif",
+        "name": "Shubham",
+        "age": 22,
+        "status":"Accept"
+      },
+      {
+        "imgurl": "assets/images/listing/Rajveer.jpg",
+        "name": "Nishant Tidke",
+        "age": 21,
+        "status":"Pending"
+      }
+  ]

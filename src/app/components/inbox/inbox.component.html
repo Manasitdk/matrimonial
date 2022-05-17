@@ -1,0 +1,505 @@
+<app-header></app-header>
+<div>
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Invitations</a>
+      <ng-template ngbNavContent>
+        <h1 style="text-align: center; margin: 40px">Invitations for You</h1>
+        <section>
+          <div class="container">
+            <div class="row" *ngFor="let name of names">
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/atul.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      {{names.name}}
+
+                      <span style="color: green; font-size: 18px">Online Now</span>
+                    </h3>
+                    <h5>{{names.id}}</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 26 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6 class="job">JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/somesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Arun Sharma
+                      <span style="color: rgb(253, 172, 22); font-size: 18px">offline Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/atul.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Virat
+                      <span style="color: green; font-size: 18px">View Profile</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/Depesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Vidhan Tidke
+                      <span style="color: green; font-size: 18px">View Profile</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <p class="age">Age: 21 yrs. <span>Height: 5'5''</span></p>
+
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/Arvind.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Ganesh Tidke
+                      <span style="color: green; font-size: 18px">Online Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/Depesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Vikas
+                      <span style="color: rgb(253, 172, 22); font-size: 18px">offline Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div style="margin: 0px; padding: 20px 30px">
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px">
+                        Accept
+                      </button>
+                      <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 20px">
+                        Decline
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ng-template>
+    </li>
+
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Accepted</a>
+      <ng-template ngbNavContent>
+        <h1 style="text-align: center; margin: 40px">Accepted Invitations</h1>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/atul.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Karan Patil
+                      <!-- <div class="status"><i class="fa fa-circle online"></i></div> -->
+                      <span style="color: green; font-size: 18px">Online Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 26 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6 class="job">JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <!-- <div style="margin: 0px; padding: 20px 30px;">
+                              <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px;"><i class="fa fa-comments"></i>Shaadi Chat</button>
+          
+                            </div> -->
+
+                    <div id="sy-whatshelp">
+                      <div class="sywh-services">
+                        <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                          <i class="fa fa-comments"></i>
+                        </a>
+
+                      </div>
+                      <a class="sywh-open-services" data-tooltip="Contact Us" data-placement="left"
+                        routerLink="/chatbox">
+                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/somesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Arun Sharma
+                      <span style="color: rgb(253, 172, 22); font-size: 18px">offline Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div id="sy-whatshelp">
+                      <div class="sywh-services">
+                        <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                          <i class="fa fa-comments"></i>
+                        </a>
+                        
+                      </div>
+                      <a class="sywh-open-services" data-tooltip="Contact Us" data-placement="left"
+                        routerLink="/chatbox">
+                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+      </ng-template>
+    </li>
+
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Sent</a>
+      <ng-template ngbNavContent>
+        <h1 style="text-align: center; margin: 40px">Sent invitations</h1>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/atul.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Karan Patil
+                      <!-- <div class="status"><i class="fa fa-circle online"></i></div> -->
+                      <span style="color: green; font-size: 18px">Online Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 26 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6 class="job">JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <!-- <div style="margin: 0px; padding: 20px 30px;">
+                              <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px;"><i class="fa fa-comments"></i>Shaadi Chat</button>
+          
+                            </div> -->
+
+                    <div id="sy-whatshelp">
+                      <div class="sywh-services">
+                        <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                          <i class="fa fa-comments"></i>
+                        </a>
+                        <!-- <a
+                            href=""
+                            class="whatsapp"
+                            data-tooltip="WhatsApp"
+                            data-placement="left"
+                            target="_blank"
+                          >
+                            <i class="fa fa-whatsapp"></i>
+                          </a> -->
+                        <!-- <a
+                            href=""
+                            class="call"
+                            data-tooltip="Call"
+                            data-placement="left"
+                          >
+                            <i class="fa fa-phone"></i>
+                          </a> -->
+                      </div>
+                      <a class="sywh-open-services" data-tooltip="Contact Us" data-placement="left">
+                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/somesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Arun Sharma
+                      <span style="color: rgb(253, 172, 22); font-size: 18px">offline Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <div id="sy-whatshelp">
+                      <div class="sywh-services">
+                        <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                          <i class="fa fa-comments"></i>
+                        </a>
+                        <!-- <a
+                              href=""
+                              class="whatsapp"
+                              data-tooltip="WhatsApp"
+                              data-placement="left"
+                              target="_blank"
+                            >
+                              <i class="fa fa-whatsapp"></i>
+                            </a>
+                            <a
+                              href=""
+                              class="call"
+                              data-tooltip="Call"
+                              data-placement="left"
+                            >
+                              <i class="fa fa-phone"></i>
+                            </a> -->
+                      </div>
+                      <a class="sywh-open-services" data-tooltip="Contact Us" data-placement="left">
+                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/atul.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Karan Patil
+                      <span style="color: green; font-size: 18px">Online Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 26 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6 class="job">JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                    <!-- <div style="margin: 0px; padding: 20px 30px;">
+                              <button type="button" class="btn btn-dark" style="font-size: larger; margin-left: 10px;"><i class="fa fa-comments"></i>Shaadi Chat</button>
+          
+                            </div> -->
+
+                    <div id="sy-whatshelp">
+                      <div class="sywh-services">
+                        <a href="" class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                          <i class="fa fa-comments"></i>
+                        </a>
+                        <!-- <a
+                            href=""
+                            class="whatsapp"
+                            data-tooltip="WhatsApp"
+                            data-placement="left"
+                            target="_blank"
+                          >
+                            <i class="fa fa-whatsapp"></i>
+                          </a>
+                          <a
+                            href=""
+                            class="call"
+                            data-tooltip="Call"
+                            data-placement="left"
+                          >
+                            <i class="fa fa-phone"></i>
+                          </a> -->
+                      </div>
+                      <a class="sywh-open-services" data-tooltip="Contact Us" data-placement="left">
+                        <i class="fa fa-comments"></i>
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ng-template>
+    </li>
+
+    <li [ngbNavItem]="4">
+      <a ngbNavLink>Deleted</a>
+      <ng-template ngbNavContent>
+        <h1 style="text-align: center; margin: 40px">Deleted invitations</h1>
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card card-01">
+                  <img class="card-img-top" src="../../../assets/somesh.jpg" alt="Card image cap"
+                    style="width: 80%; margin-left: 30px" />
+                  <div class="card-body">
+                    <span class="badge-box"><i class="fa fa-check"></i></span>
+                    <h3 class="card-title">
+                      Arun Sharma
+                      <span style="color: rgb(253, 172, 22); font-size: 18px">offline Now</span>
+                    </h3>
+                    <h5>ID No: SM2000</h5>
+                    <div class="card-text">
+                      <h6 class="age">Age: 21 yrs.</h6>
+                      <h6 class="height">Height: 5'5''</h6>
+                      <h6 class="cast">Cast: Maratha</h6>
+                      <h6 class="matrital">Matrital Status: Never Married</h6>
+                      <h6>JOb: Software Developer</h6>
+                      <h6 class="live">Live In: Pune, Maharahatra</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+</div>

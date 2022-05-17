@@ -1,0 +1,313 @@
+<app-header></app-header>
+<div class="row container-fluid ">
+  <div class="col col-sm-2 sidebar">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <p class="mx-5 mt-2"> Filters</p>
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Marital status
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body" *ngFor="let obj of searchobj  ">
+            <select class="custom-select form-control btnaddnotes ml-2 " id="matrialstatus" [(ngModel)]="search" required>
+              <option selected>Filter By Status</option>
+              <option *ngFor="let obj of searchobj " value="{{obj.matrialstatus}}">{{obj.matrialstatus}}
+              </option>
+          </select>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Cast
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <select class="custom-select form-control btnaddnotes ml-2 " id="cast" [(ngModel)]="search" required>
+              <option selected>Filter By Status</option>
+              <option *ngFor="let obj of searchobj " value="{{obj.cast}}">{{obj.cast}}
+              </option>
+          </select>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Job
+          </button>
+        </h2>
+        <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <select class="custom-select form-control btnaddnotes ml-2 " id="job" [(ngModel)]="search" required>
+              <option selected>Filter By Status</option>
+              <option *ngFor="let obj of searchobj " value="{{obj.job}}">{{obj.job}}
+              </option>
+          </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Age
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <select class="custom-select form-control btnaddnotes ml-2 " id="age" [(ngModel)]="search" required>
+              <option selected>Filter By Status</option>
+              <option *ngFor="let obj of searchobj " value="{{obj.age}}">{{obj.age}}
+              </option>
+          </select>
+            <!-- <div>
+              <input class="inputname mx-2" type="radio" name="Age">
+              <label class="labelname mt-2" for="">22 To 26</label>
+            </div>
+            <div>
+              <input class="inputname mx-2 " type="radio" name="Age">
+              <label class="labelname mt-2" for="">26 To 30</label>
+            </div>
+            <div>
+              <input class="inputname mx-2" type="radio" name="Age">
+              <label class="labelname mt-2" for="">More than 30</label>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Height
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <select class="custom-select form-control btnaddnotes ml-2 " id="height" [(ngModel)]="search" required>
+              <option selected>Filter By Status</option>
+              <option *ngFor="let obj of searchobj " value="{{obj.height}}">{{obj.height}}
+              </option>
+          </select>
+            <!-- <div>
+              <input class="inputname mx-2" type="radio" name="height">
+              <label class="labelname mt-2" for="">Under 5 Ft</label>
+            </div>
+            <div>
+              <input class="inputname mx-2 " type="radio" name="height">
+              <label class="labelname mt-2" for="">5 ft to 6 ft</label>
+            </div>
+            <div>
+              <input class="inputname mx-2" type="radio" name="height">
+              <label class="labelname mt-2" for="">More than 6 ft</label>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
+    <h1 style="text-align: center; margin-top: 3%; font-weight: 700">
+      Filter Your Matches
+    </h1>
+    <section>
+      <div class="background-color mt-3" >
+        <div class="text-center h1 text-black mt-5">Some Matches for You</div>
+        <div class="container ">
+          <div class="card 0-hidden border-0 shadow mt-3" >
+            <div class="row mt-3" *ngFor="let obj of searchobj  | filter:search | paginate: { itemsPerPage: 3, currentPage: p }">
+              <div class="col-3 ">
+                <img src="{{obj.imgurl}}" alt="" class="img-fluid">
+              </div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-">
+                    <h5 class="mt-1">{{obj.name}}</h5>
+                    <i class="bi bi-chat-fill"></i>
+                    <h6>{{obj.id}}</h6>
+                    <h6>{{obj.status}}</h6>
+                  </div>
+                </div>
+                <div class="mt-0">
+                  <hr>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h6> {{obj.age}}  {{obj.height}}</h6>
+                    <h6>{{obj.cast}}</h6>
+                    <h6>{{obj.lang}}</h6>
+                  </div>
+                  <div class="col-6">
+                    <h6>{{obj.matrialstatus}}</h6>
+                    <h6>{{obj.city}}</h6>
+                    <h6>{{obj.job}}</h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <div class="connect">
+                  <p class="h6 mt-5 text-center">Like This Profile?</p>
+                </div>
+                <div class="connect-logo">
+                  <a href="" routerLink="/updatemembership"><i class="fa-solid fa-square-check"></i></a>
+                </div>
+                <div>
+                  <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="text-end">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+             </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!--  
+            <div class="row">
+              <div class="col-3">
+                <img src="../../../assets/images/listing/Depesh.jfif" alt="" class="img-fluid">
+              </div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-">
+                    <h5 class="mt-1">Depesh Padalwar</h5>
+                    <i class="bi bi-chat-fill"></i>
+                    <h6>SM678</h6>
+                    <h6>Online Now</h6>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <h6>25 yrs, 5'9"</h6>
+                    <h6> Hindu Mannervarlu</h6>
+                    <h6>Marathi</h6>
+                  </div>
+                  <div class="col-6">
+                    <h6>Never Married</h6>
+                    <h6>Pune Maharashtra</h6>
+                    <h6>JS Developer</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="connect">
+                  <p class="h6 mt-5 text-center">Like This Profile?</p>
+                </div>
+                <div class="connect-logo">
+                  <a href="" routerLink="/updatemembership"><i class="fa-solid fa-square-check"></i></a>
+                </div>
+                <div class="">
+                  <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-3 0-hidden border-0 shadow mb-1">
+            <div class="row">
+              <div class="col-3">
+                <img src="../../../assets/images/listing/Rajveer.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-">
+                    <h5 class="mt-1">Rajveer Kadam </h5>
+                    <i class="bi bi-chat-fill"></i>
+                    <h6>SM856931</h6>
+                    <h6>Online Now</h6>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <h6>25 yrs, 5'9"</h6>
+                    <h6>Hindu, Vani</h6>
+                    <h6>Marathi</h6>
+                  </div>
+                  <div class="col-6">
+                    <h6>Never Married</h6>
+                    <h6>Mumbai Maharashtra</h6>
+                    <h6>Associate Engineer</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="connect">
+                  <p class="h6 mt-5 text-center">Like This Profile?</p>
+                </div>
+                <div class="connect-logo">
+                  <a href="" routerLink="/updatemembership"><i class="fa-solid fa-square-check"></i></a>
+                </div>
+                <div class="">
+                  <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-3 0-hidden border-0 shadow mb-1">
+            <div class="row">
+              <div class="col-3">
+                <img src="../../../assets/images/listing/Depesh.jfif" alt="" class="img-fluid">
+              </div>
+              <div class="col-6">
+                <div class="row">
+                  <div class="col-">
+                    <h5 class="mt-1">Arvind gupta</h5>
+                    <i class="bi bi-chat-fill"></i>
+                    <h6>SM12345</h6>
+                    <h6>Online Now</h6>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-6">
+                    <h6>25 yrs, 5'9"</h6>
+                    <h6>Hindu, 96 Kuli Maratha</h6>
+                    <h6>Marathi</h6>
+                  </div>
+                  <div class="col-6">
+                    <h6>Never Married</h6>
+                    <h6>Panvel Maharashtra</h6>
+                    <h6>Software Developer</h6>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col-3">
+                <div class="connect">
+                  <p class="h6 mt-5 text-center">Like This Profile?</p>
+                </div>
+                <div class="connect-logo">
+                  <a href="" routerLink="/updatemembership"><i class="fa-solid fa-square-check"></i></a>
+                </div>
+                <div class="">
+                  <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+                </div>
+     </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>   -->

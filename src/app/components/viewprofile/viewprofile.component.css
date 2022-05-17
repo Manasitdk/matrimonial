@@ -1,0 +1,138 @@
+.navbar-brand{
+    height: 50px;
+}
+.cover-photo{
+      height: 400px;
+    
+    width: 100%;
+
+}
+.img-circle{
+   
+    
+    border-radius: 50%;
+ 
+}
+.basic{
+    margin-left: 25px;
+   
+}
+
+.btn-primary,.btn-outline-dark{
+    margin-top: 120px;
+
+    margin-left: 30px;
+}
+.drop-down{
+    float: right;
+    margin-right: 10px;
+}
+
+.b-details{
+    margin-left: 50px;
+}
+
+.conn{
+    margin-top: -14%;
+    margin-left: 70%;
+}
+
+  
+  
+.navbar-brand{
+    height: 50px;
+}
+.cover-photo{
+      height: 400px;
+    
+    width: 100%;
+
+}
+.img-circle{
+   
+    
+    border-radius: 50%;
+ 
+}
+.basic{
+    margin-left: 25px;
+   
+}
+
+.btn-primary,.btn-outline-dark{
+    margin-top: 120px;
+
+    margin-left: 30px;
+}
+.drop-down{
+    float: right;
+    margin-right: 10px;
+}
+
+.b-details{
+    margin-left: 50px;
+}
+
+.conn{
+    margin-top: -14%;
+    margin-left: 70%;
+}
+.bold{
+    font-weight: bolder;
+}
+.para{
+    margin-left: 920px;
+    font-weight: bolder;
+    margin-top: -250px;
+
+}
+
+ .big{
+   font-size: 100px;
+   margin-top: -10px;
+ }
+ .c100{
+   position: relative;
+   width: 1em;
+   height: 1em;
+   border-radius: 50%;
+   background-color: rgb(188, 186, 186);
+   margin: 30px auto;
+ }
+ .c100:after{
+   content: '';
+   position: absolute;
+   background-color: #dddddd;
+   height: 0.84em;
+   width: 0.84em;
+   left: 0.08em;
+   top: 0.08em;
+   border-radius: 50%;
+ }
+ .no{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 5em;
+   font-size: 0.2em;
+   line-height: 5em;
+   color: rgb(54, 54, 54);
+   display: block;
+   text-align: center;
+   z-index: 1;
+ }
+ .slice{
+   position: absolute;
+   height: 1em;
+   width: 1em;
+   clip: rect(auto, auto, auto, auto);
+   /*
+      when width is less than 50%/ 180deg;
+     clip: rect(0em, 1em, 1em, 0.5em);
+   */
+ }
+ 
+ .p{
+    margin-top: -15px;
+    margin-left: 40px;
+ }

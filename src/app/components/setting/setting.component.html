@@ -1,0 +1,220 @@
+<app-header></app-header>
+  <div class="container">
+    <div>
+      <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink class="fw-bold ">Account Settings</a>
+          <ng-template ngbNavContent>
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+              <ngb-panel title="Email">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-auto">
+                      <label for="staticEmail2" class="fw-bold">Email</label>
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
+                        mailto:value="aaravpadalwar@gmail.com">
+                    </div>
+                    <div class="col-auto">
+                      <label for="inputPassword2" class="fw-bold">Update Email</label>
+                      <input type="email" class="form-control" id="updateEmail" placeholder="Password">
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-primary mb-3">Update Email</button>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel title="Password">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-auto">
+                      <label for="staticEmail2" class="fw-bold">Password</label>
+                      <input type="password" readonly class="form-control-plaintext" id="staticpassword"
+                        value="aaravpadalwar">
+                    </div>
+                    <div class="col-auto">
+                      <label for="inputPassword2" class="fw-bold">Update Password</label>
+                      <input type="password" class="form-control" id="updatePassword" placeholder="Password">
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-primary mb-3">Update Password</button>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+  
+  
+            </ngb-accordion>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink class="fw-bold">Privacy Option</a>
+          <ng-template ngbNavContent>
+            <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+              <ngb-panel title="Name">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-4">
+                      <label for="staticEmail2" class=" fw-bold">Name: Aarav Padalwar</label>
+                    </div>
+                    <div class="col-4">
+                      <label for="rdio" class="fw-bold">Display Name As</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Hide my name </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-danger mb-3 ">Cancel</button>
+                        </div>
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-primary mb-3 align-button">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel title="Contact">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-4">
+                      <label for="staticEmail2" class=" fw-bold">Phone</label>
+                    </div>
+                    <div class="col-4">
+                      <label for="rdio" class="fw-bold">Show Number To</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Only Premium Members
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Only Members you like
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-danger mb-3 ">Cancel</button>
+                        </div>
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-primary mb-3 align-button">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel title="Email">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-4">
+                      <label for="staticEmail2" class=" fw-bold">Email</label>
+                    </div>
+                    <div class="col-4">
+                      <label for="rdio" class="fw-bold">Show To </label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Only Premium members
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         only members i like
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-danger mb-3 ">Cancel</button>
+                        </div>
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-primary mb-3 align-button">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel title="Annual Income">
+                <ng-template ngbPanelContent>
+                  <form class="row g-3">
+                    <div class="col-4">
+                      <label for="staticEmail2" class=" fw-bold">Annual Income </label>
+                    </div>
+                    <div class="col-4">
+                      <label for="rdio" class="fw-bold">Show To </label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Only Premium members
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                          checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                         only members i like
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row">
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-danger mb-3 ">Cancel</button>
+                        </div>
+                        <div class="col-6">
+                          <button type="submit" class="btn btn-primary mb-3 align-button">Update</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+  
+  
+  
+            </ngb-accordion>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink class="fw-bold">Delete Profile</a>
+          <ng-template ngbNavContent>
+            <div class="card 0-hidden border-2 shadow-lg my-5" style="width:500px; height: 200px;">
+              <div class="card-body">
+                <h3 class="card-title text-center">Delete Account</h3>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text text-center mt-4">Are you sure you want to delete your account?</p>
+                <button type="button" class="btn btn-primary btn-lg" (click)="toSettings()">Cancel</button>
+                <button type="button" class="btn btn-danger btn-lg" (click)="toHome()">Delete</button>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  
+    <!-- <pre>Active: {{ active }}</pre> -->
+  
+  </div>
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />

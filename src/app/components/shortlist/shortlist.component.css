@@ -1,0 +1,34 @@
+body{
+    overflow: hidden;
+}
+.short{
+    font-size: 20px
+}
+
+.myintresest{
+    margin-left: -40px;
+}
+td a{
+    text-decoration: none;
+}
+.fa-heart{
+    color: red;
+    font-size: 22px;
+}
+.btn-soft-danger{
+    font-size: 22px;
+    
+}
+
+.modal-header {
+    border-bottom: 0 none;
+  }
+  .title{
+    margin-top: -30px;
+  }
+.fa-solid .fa-trash{
+  border: 0 none;
+}
+.btnaddnotes{
+    margin-left: 80%;
+}

@@ -1,0 +1,241 @@
+<nav class="navbar navbar-expand-lg navbar-light nav bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../../../assets/4957587-removebg-preview.png" alt="" srcset=""><span>
+                <h4>NateSambhandh</h4>
+            </span>
+        </a>
+        <div id="navbarSupportedContent">
+            <p class="text-white helpline mt-3 ">Help-Line 9309976861</p>
+        </div>
+        <div class="profile">
+
+
+            <div class="dropdown">
+
+                <button class="dropbtn">
+                    Profile
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" routerLink="/editprofile">Edit Profile</a>
+                    <a href="#" routerLink="/setting">Setting</a>
+                    <a href="#" routerLink="/home">Sign Out</a>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="button btn-dark" routerLink="/home">logout</button>
+    </div>
+</nav>
+<div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card 0-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+
+                                        <h1 class="h4 text-grey-900 mb-2">
+                                            Welcome Back ! lets start your serach with this signup
+                                        </h1>
+
+                                    </div>
+                                    <form class="user" [formGroup]="formRigister">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label for="Profile" class="mb-2">Profile For</label>
+                                                <select class="form-select form-select-sm form-control" id="profilefor"
+                                                    name="profilefor" aria-label=".form-select-sm example"
+                                                    formControlName="profilefor">
+                                                    <option selected>Select The profile For</option>
+                                                    <option value="Self">Self</option>
+                                                    <option value="son">Son</option>
+                                                    <option value="daughter">Daughter</option>
+                                                    <option value="sister">Sister</option>
+                                                    <option value="brother">Brother</option>
+                                                    <option value="friend">Friend</option>
+                                                    <option value="relative">Relative</option>
+                                                </select>
+                                                <div class="form-text text-danger"
+                                                *ngIf="formRigister.get('profilefor')?.hasError('required') && formRigister.get('profilefor')?.touched">choose Profile for
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="password" class="mt-2 mb-2">Name </label>
+                                            <div class="col-6">
+                                                <input type="text" class="form-control form-control-user d-inline"
+                                                    placeholder="Enter your First Name" id="firstname"
+                                                    formControlName="firstname" required ngModel pattern="[a-zA-Z ]*" />
+                                                <div class="form-text text-danger"
+                                                    *ngIf="formRigister.get('firstname')?.hasError('required') && formRigister.get('firstname')?.touched">
+                                                    enter your valid firstname
+                                                </div>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="text" class="form-control form-control-user d-inline"
+                                                    placeholder="Enter your Last Name" id="lastname"
+                                                    formControlName="lastname" required ngModel pattern="[a-zA-Z ]*" />
+                                                <div class="form-text text-danger"
+                                                    *ngIf="formRigister.get('lastname')?.hasError('required') && formRigister.get('lastname')?.touched">
+                                                    enter your valid lastname
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="fs-6 mt-1 mb-2 ">Date Of Birth</label>
+                                            <div class="col-12 ">
+                                                <input type="date" placeholder="mm/dd/yy" class="form-control"
+                                                    formControlName="dob" [ngClass]="{ 'is-invalid': submitted }" />
+                                                <div *ngIf="submitted" class="invalid-feedback">
+                                                    <div *ngIf="">Date of Birth is required</div>
+                                                    <div *ngIf="">Date of Birth must be a valid date in the format
+                                                        YYYY-MM-DD</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label class="fs-6 mt-2 mb-2 ">Gender</label>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mt-2">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" value="Female"
+                                                        formControlName="gender" />
+                                                    <label class="form-check-label">Female</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mt-2">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" value="Male"
+                                                        formControlName="gender" />
+                                                    <label class="form-check-label">Male</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="mt-2">
+                                                    <input class="form-check-input" type="radio"
+                                                        name="inlineRadioOptions" value="Other"
+                                                        formControlName="gender" />
+                                                    <label class="form-check-label">Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="Profile" class="mb-2">Religion</label>
+                                                <select class="form-select form-select-sm form-control" name="religion"
+                                                    id="religion" aria-label=".form-select-sm example"
+                                                    formControlName="religion">
+                                                    <option selected>Select</option>
+                                                    <option value="hindu">Hindu</option>
+                                                    <option value="muslim">Muslim</option>
+                                                    <option value="christian">Christian</option>
+                                                    <option value="sikhs">Sikhs</option>
+                                                    <option value="buddhists">Buddhists</option>
+                                                    <option value="jains">Jains</option>
+                                                </select>
+                                                <div class="form-text text-danger"
+                                                *ngIf="formRigister.get('religion')?.hasError('required') && formRigister.get('religion')?.touched">choose your religion
+                                              </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="Profile" class="mb-2">Caste</label>
+                                                <select class="form-select form-select-sm form-control" id="cast"
+                                                    name="cast" aria-label=".form-select-sm example"
+                                                    formControlName="cast">
+                                                    <option selected>Select </option>
+                                                    <option value="Maratha">Maratha</option>
+                                                    <option value="96kmaratha">96K maratha</option>
+                                                    <option value="Komti">Komti</option>
+                                                    <option value="Vanjari">Vanjari</option>
+                                                    <option value="Brahman">Brahman</option>
+                                                    <!-- <option value="hindu">Gujrati</option>
+                                                    <option value="hindu">Telgu</option>
+                                                    <option value="hindu">Kanada</option>
+                                                    <option value="hindu">English</option>
+                                                    <option value="hindu">Odia</option>
+                                                    <option value="hindu">Marwari</option>
+                                                    <option value="hindu">Tamil</option> -->
+                                                </select>
+                                                <div class="form-text text-danger"
+                                                *ngIf="formRigister.get('cast')?.hasError('required') && formRigister.get('cast')?.touched">choose your cast
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label for="number" class="mb-2 mt-2">Mobile Number</label>
+                                                <input type="number" class="form-control form-control-user" id="number"
+                                                    value="number" formControlName="number"
+                                                    placeholder="Enter your Mobile Number" />
+                                                <div class="form-text text-danger"
+                                                    *ngIf="formRigister.get('number')?.hasError('required') && formRigister.get('number')?.touched">
+                                                    enter your valid Number
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label for="email" class="mb-2 mt-2">Email Address</label>
+                                                <input type="emial" class="form-control form-control-user"
+                                                    id="emailAddress" formControlName="email" required
+                                                    ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                                    placeholder="Enter your email address" />
+                                                <div class="form-text text-danger"
+                                                    *ngIf="formRigister.get('email')?.hasError('required') && formRigister.get('email')?.touched">
+                                                    enter your valid Email
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label for="password" class="mb-2 mt-2">Password</label>
+                                                <input type="password" class="form-control form-control-user"
+                                                    placeholder="Enter your password" id="password"
+                                                    formControlName="password" />
+                                                <div class="form-text text-danger"
+                                                    *ngIf="formRigister.get('password')?.hasError('required') || formRigister.get('password')?.touched">
+                                                    enter your valid password
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="btn btn-dark mt-4" (click)="toProfile()"
+                                            [disabled]="!formRigister.valid" >
+                                            Register
+                                        </button>
+
+                                    </form>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="registered h6">
+                                                <p>Already registered?</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-start login">
+                                                <a routerLink="/login" class="h6">Login</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

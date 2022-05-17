@@ -1,0 +1,432 @@
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous"
+/>
+<app-header></app-header>
+<!-- <div>
+  <nav class="navbar navbar-expand-lg">
+    <img
+      src="../../../assets/cropped-shaadi-logo.jpg"
+      alt=""
+      srcset=""
+      class="img"
+    />
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home</a>
+        <a class="nav-item nav-link" href="#" routerLink="/listing-matches">Matches</a>
+        <a class="nav-item nav-link" href="#">Search</a>
+        <a class="nav-item nav-link" href="#" routerLink="/inbox">Inbox</a>
+        <a class="nav-item nav-link" href="#">Help</a>
+      </div>
+      <div class="dropdown">
+        <i
+          class="fa fa-user-circle"
+          style="color: white; font-size: 30px; margin-top: 10px"
+        ></i>
+
+        <button class="dropbtn">
+          Profile
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Setting</a>
+          <a href="#">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div> -->
+
+<!-- <h1 style="text-align: center;  font-weight: 700">
+  Some Matches for You
+</h1>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/atul.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Karan Patil
+              <span style="color: green; font-size: 18px">Online Now</span>
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <h6 class="age">Age: 26 yrs.</h6>
+              <h6 class="height">Height: 5'5''</h6>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6 class="job">JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a href="#" class="btn btn-default text-uppercase" routerLink="/viewprofile">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/somesh.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Arun Sharma
+              <span style="color: rgb(253, 172, 22); font-size: 18px"
+                >offline Now</span
+              >
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <h6 class="age">Age: 21 yrs.</h6>
+              <h6 class="height">Height: 5'5''</h6>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6>JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a class="btn btn-default text-uppercase" routerLink="/updatemembership"><app-updatemembership></app-updatemembership></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/atul.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Virat 
+              <span style="color: green; font-size: 18px" routerLink="view-profile">View Profile</span>
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <h6 class="age">Age: 21 yrs.</h6>
+              <h6 class="height">Height: 5'5''</h6>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6>JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a href="#" class="btn btn-default text-uppercase" routerLink="/view-profile">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/Depesh.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Vidhan Tidke
+              <span style="color: green; font-size: 18px" routerLink="/view-profile">View Profile</span>
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <p class="age">Age: 21 yrs. <span>Height: 5'5''</span></p>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6>JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a href="#" class="btn btn-default text-uppercase" routerLink="/view-profile">View Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/Arvind.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Ganesh Tidke
+              <span style="color: green; font-size: 18px">Online Now</span>
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <h6 class="age">Age: 21 yrs.</h6>
+              <h6 class="height">Height: 5'5''</h6>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6>JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a href="#" class="btn btn-default text-uppercase" routerLink="/view-profile">View profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-01">
+          <img
+            class="card-img-top"
+            src="../../../assets/Depesh.jpg"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h3 class="card-title">
+              Vikas 
+              <span style="color: rgb(253, 172, 22); font-size: 18px"
+                >offline Now</span
+              >
+              
+            </h3>
+            <h5>ID No: SM2000</h5>
+            <div class="card-text">
+              <h6 class="age">Age: 21 yrs.</h6>
+              <h6 class="height">Height: 5'5''</h6>
+              <h6 class="cast">Cast: Maratha</h6>
+              <h6 class="matrital">Matrital Status: Never Married</h6>
+              <h6>JOb: Software Developer</h6>
+              <h6 class="live">Live In: Pune, Maharahatra</h6>
+            </div>
+            <a href="#" class="btn btn-default text-uppercase" routerLink="/view-profile">View profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<div class="background-color">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../../../assets/images/logo/logo2.png" alt="" width="120" height="120">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a routerlink="/home" class="nav-link active text-white" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" >Matches</a>
+            </li>`
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" >Search</a>
+            </li>
+            <li class="nav-item">
+              <a  routerlink="/helpdesk"class="nav-link active text-white" aria-current="page" >Inbox</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/login" class="nav-link active text-white" aria-current="page" href="/login" >Help</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+        </div>
+      </div>
+    </nav> -->
+    <div class="text-center h1 text-black"> Some Matches for You</div>
+    <div class="container mt-4">
+      <div class="card 0-hidden border-0 shadow">
+        <div class="row">
+          <div class="col-3">
+            <img src="../../../../assets/images/listing/Arvind.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-">
+                <h5 class="mt-1">Arvind gupta</h5>
+                <i class="bi bi-chat-fill"></i>
+                <h6>SM12345</h6>
+                <h6>Online Now</h6>
+              </div>
+            </div>
+            <div class="mt-0">
+              <hr>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <h6>25 yrs, 5'9"</h6>
+                <h6>Hindu, 96 Kuli Maratha</h6>
+                <h6>Marathi</h6>
+              </div>
+              <div class="col-6">
+                <h6>Never Married</h6>
+                <h6>Panvel Maharashtra</h6>
+                <h6>Software Developer</h6>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="connect">
+              <p class="h6 mt-5 text-center">Like This Profile?</p>
+            </div>
+            <div class="connect-logo">
+              <img src="../../../assets/images/logo/connect now.png" alt="">
+            </div>
+            <div class="">
+              <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card 0-hidden border-0 shadow mt-3">
+        <div class="row">
+          <div class="col-3">
+            <img src="../../../assets/images/listing/Depesh.jfif" alt="" class="img-fluid">
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-">
+                <h5 class="mt-1">Depesh Padalwar</h5>
+                <i class="bi bi-chat-fill"></i>
+                <h6>SM678</h6>
+                <h6>Online Now</h6>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-6">
+                <h6>25 yrs, 5'9"</h6>
+                <h6> Hindu Mannervarlu</h6>
+                <h6>Marathi</h6>
+              </div>
+              <div class="col-6">
+                <h6>Never Married</h6>
+                <h6>Pune Maharashtra</h6>
+                <h6>JS Developer</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="connect">
+              <p class="h6 mt-5 text-center">Like This Profile?</p>
+            </div>
+            <div class="connect-logo">
+              <img src="../../../assets/images/logo/connect now.png" alt="">
+            </div>
+            <div class="">
+              <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-3 0-hidden border-0 shadow mb-1">
+        <div class="row">
+          <div class="col-3">
+            <img src="../../../assets/images/listing/Rajveer.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-">
+                <h5 class="mt-1">Rajveer Kadam </h5>
+                <i class="bi bi-chat-fill"></i>
+                <h6>SM856931</h6>
+                <h6>Online Now</h6>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-6">
+                <h6>25 yrs, 5'9"</h6>
+                <h6>Hindu, Vani</h6>
+                <h6>Marathi</h6>
+              </div>
+              <div class="col-6">
+                <h6>Never Married</h6>
+                <h6>Mumbai Maharashtra</h6>
+                <h6>Associate Engineer</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="connect">
+              <p class="h6 mt-5 text-center">Like This Profile?</p>
+            </div>
+            <div class="connect-logo">
+              <img src="../../../assets/images/logo/connect now.png" alt="">
+            </div>
+            <div class="">
+              <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-3 0-hidden border-0 shadow mb-1">
+        <div class="row">
+          <div class="col-3">
+            <img src="../../../assets/images/listing/mukesh.jpg" alt="" class="img-fluid">
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-">
+                <h5 class="mt-1">Arvind gupta</h5>
+                <i class="bi bi-chat-fill"></i>
+                <h6>SM12345</h6>
+                <h6>Online Now</h6>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-6">
+                <h6>25 yrs, 5'9"</h6>
+                <h6>Hindu, 96 Kuli Maratha</h6>
+                <h6>Marathi</h6>
+              </div>
+              <div class="col-6">
+                <h6>Never Married</h6>
+                <h6>Panvel Maharashtra</h6>
+                <h6>Software Developer</h6>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="connect">
+              <p class="h6 mt-5 text-center">Like This Profile?</p>
+            </div>
+            <div class="connect-logo">
+              <img src="../../../assets/images/logo/connect now.png" alt="">
+            </div>
+            <div class="">
+              <p class="h6 mt-2 mb-3 text-center">Connect Now!</p>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+

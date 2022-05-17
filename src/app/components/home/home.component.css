@@ -1,0 +1,300 @@
+/* .img-fluid {
+    width: 100%;
+    height: 650px;
+    position: relative;
+  } */
+
+.img-fluid {
+  max-width: 100%;
+  height: 620px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 90px;
+  color: white;
+  margin-top: 2%;
+
+
+}
+
+.login {
+  margin-left: 90%;
+  /* margin-bottom: 80%;    */
+
+}
+
+.login .help {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+
+}
+
+.log {
+  color: white;
+  text-decoration: none;
+}
+
+.text {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  text-align: justify;
+  font-weight: bolder;
+}
+
+.text h1 {
+  font-weight: bolder;
+  line-height: 1.5;
+  word-spacing: 2px;
+  margin-top: 5%;
+
+}
+
+a:link {
+  color: white;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.slagon h1 {
+
+  max-width: 40ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+}
+
+.span1 {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.span1:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.span1:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.span1:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.span1:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.text-center {
+  /* / text-align: center; /
+  / margin-top: 10%; /
+  / margin-left: 35%; / */
+  margin-top: 3%;
+  font-weight: 700;
+
+}
+
+.circle {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  border: 3px solid black;
+  margin-right: 20%;
+  display: flex;
+  background-color: rgb(218, 218, 218);
+}
+
+.circle i {
+  font-size: 60px;
+  margin-left: 55px;
+  margin-top: 50px;
+}
+
+.profile {
+  margin-left: 110px;
+}
+
+.connect {
+  margin-left: 28%;
+}
+
+.interact {
+  margin-left: 28%;
+}
+
+.icon {
+  margin-bottom: 50%;
+}
+
+.card {
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: rgb(219, 217, 217);
+  font-size: 19px;
+  color: black;
+  text-align: center;
+}
+
+.card-body {
+  padding: 10%;
+}
+
+.card-body .btn {
+  border: none;
+  padding: 10px 30px;
+  margin-left: 18px;
+  margin-top: 20px;
+}
+
+.iconcss {
+  margin-left: 90%;
+
+  font-size: 30px;
+}
+
+
+footer {
+  margin-top: 10%;
+  background-color: rgb(206, 206, 206);
+
+  border: 1px solid rgb(186, 205, 220);
+
+}
+
+.profile-container {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.profile-card {
+  flex: 1 1 30%;
+  max-width: 300px;
+  max-height: 500px;
+  background: rgb(205, 205, 205);
+  padding: 20px 60px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 0 #ccc;
+  transition: .3s;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px -5px #ccc;
+}
+
+.profile-icon {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 25px 0 10px 0;
+}
+
+.profile-position {
+  font-size: 14px;
+  color: #777;
+}
+
+.button {
+  margin: 40px 0 0 0;
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: rgb(70, 100, 247);
+
+}
+
+.button:hover {
+  color: #fff;
+  background: #748dff;
+  border: 1px solid #000000;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile-name {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile-card {
+    padding: 20px 15px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+}
+
+.see {
+  padding-left: 1000px;
+  margin-bottom: 290px;
+  margin-top: -10px;
+}
+
+.contact {
+  margin-left: 30%;
+  text-align: center;
+  padding: 30px;
+}
+
+.FeaturesItem_special_someone_wrap__1Me_I a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+
+}
+
+h4 {
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.FeaturesItem_special_someone_wrap__1Me_I div {
+  margin-top: 10px;
+}

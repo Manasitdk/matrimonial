@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <app-sidebar></app-sidebar>
+
+        </div>
+
+        <div class="col-md-8 support">
+            <h2 class="ms-2 mt-5">My Tickets</h2>
+            <button type="submit" class="btn-dark" style="margin-left: 80%; padding: 5px; margin-bottom: 20px" routerLink="/createticket" >Create a New Ticket</button>
+            <select class="custom-select form-control btnaddnotes ml-2" id="image" [(ngModel)]="search" required class="btnaddnotes">
+                <option value="all">All</option>
+                <option *ngFor="let obj of myticketobj | unique: 'tablestatus'" value="{{obj.tablestatus}}">{{obj.tablestatus}}
+                </option>
+            </select>
+            <table class="table mt-5 ms-0">
+
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Ticket ID</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">New Replay</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody
+                    *ngFor="let obj of myticketobj | filter:search | paginate: { itemsPerPage: 4, currentPage: p }; index as i ">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{obj.id}}</td>
+                        <td class="text-center footable-last-visible">
+                            <span class="badge badge-inline badge-info">{{obj.tablestatus}}</span>
+                        </td>
+                        <td>{{obj.subject}}</td>
+                        <td>{{obj.category}}</td>
+                        <td>{{obj.createdat}}</td>
+
+                        <td>{{obj.newreplay}}</td>
+                        <td class="text-right">
+                
+                            <a routerLink="/editticket"><i class="fa-solid fa-eye"></i></a>
+                        </td>
+                    </tr>   
+
+                </tbody>
+            </table>
+            <div class="text-end">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</body>

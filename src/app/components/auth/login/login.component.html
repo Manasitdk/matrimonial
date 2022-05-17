@@ -1,0 +1,117 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light nav bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../../../assets/4957587-removebg-preview.png" alt="" srcset=""><span>
+                <h4>NateSambhandh</h4>
+            </span>
+        </a>
+        <div id="navbarSupportedContent">
+            <p class="text-white helpline mt-3 ">Help-Line 9309976861</p>
+        </div>
+        <div class="profile">
+
+
+            <div class="dropdown">
+
+                <button class="dropbtn">
+                    Profile
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" routerLink="/editprofile">Edit Profile</a>
+                    <a href="#" routerLink="/setting">Setting</a>
+                    <a href="#" routerLink="/home">Sign Out</a>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="button btn-dark" routerLink="/home">logout</button>
+    </div>
+</nav>-->
+<div class="background-img">  
+</div>
+<div>
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-10 col-lg-12 col-md-9 col-sm-8">
+              <div class="card 0-hidden border-0 shadow-lg my-5">
+                  <div class="card-body p-0">
+                      <div class="row">
+                          <div class="col-lg-12 col-md-9 col-sm-8">
+                              <div class="p-5">
+                                  <div class="text-center">
+                                    <img src="../../../../assets/4957587-removebg-preview.png" alt="" srcset=""><span>
+                                        <h4 class="text-dark">NateSambhandh</h4>
+                                    </span>
+                                </div>
+                                      <h1 class="h4 text-grey-900 mb-2">
+                                        Welcome Back!
+                                      </h1>
+                                
+                                 
+                                      <form class="user" [formGroup]="formLogin">
+                                      <div class="form-group">
+                                        <label for="email" class="mb-2 label">Email address</label>
+                                        <input type="email" class="form-control form-control-user"
+                                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Enter your email address" id="emailAddress"
+                                            formControlName="email" required />
+                                        <div class="form-text text-danger"
+                                            *ngIf="formLogin.get('email')?.hasError('required') && formLogin.get('email')?.touched">
+                                            enter your valid email
+                                            address</div>
+                                    </div>
+                                      <div class="form-group">
+                                        <label for="password" class="mt-2 mb-2 label">Password </label>
+                                        <input type="password" class="form-control form-control-user"
+                                            placeholder="Enter your password" id="password"
+                                            formControlName="password" />
+                                        <div class="form-text text-danger"
+                                            *ngIf="formLogin.get('password')?.hasError('required') && formLogin.get('password')?.touched">
+                                            enter your valid password
+                                        </div>
+                                        </div>
+                                    <div class="row">
+                                         <div class="col-6">
+                                            <div class="mb-3 form-check mt-2">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1" formControlName="checkbox">
+                                                <label class="form-check-label" for="exampleCheck1" >Check me
+                                                    out</label>
+                                                    <div class="form-text text-danger"
+                                            *ngIf="formLogin.get('password')?.hasError('required') && formLogin.get('password')?.touched">
+                                            click the checkbox 
+                                        </div>
+                                              </div>
+                                         </div>
+                                         <div class="col-6">
+                                            <div class="mb-3 form-check mt-2">
+                                                <a routerLink="/forgetpassword" class="link-primary" routerLink="/forgetpassword">Forgot Password ?</a>
+                                              </div>
+                                         </div>
+                                    </div>
+                                    <button type="button" class="btn btn-dark mt-4 button" (click)="todashboard()" [disabled]="!formLogin.valid">
+                                        Login
+                                    </button>
+                                  </form>
+                                  <hr />
+                                  <div class="row">
+                                         <div class="col-6">
+                                            <div class="not-registered h6">
+                                                <p>Not registered Yet ? </p>
+                                             </div>
+                                         </div>
+                                         <div class="col-6">
+                                            <div >
+                                                <a routerLink="/register" class="h6" href="#">Register now!</a>
+                                            </div>
+                                         </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
